@@ -11,7 +11,13 @@ Ruby Gems
 `gem install bunny`
 
 
-Node.js 
+sudo apt-get install rabbitmq-server
+sudo rabbitmq-plugins enable rabbitmq_management
+git clone https://github.com/shadowbq/peter_rabbit_training.git
+
+
+RabbitMQ
 -----------
 
-Well there are things going here that need be resolved.. 
+* http://localhost:15672/#/
+* https://www.rabbitmq.com/tutorials/tutorial-one-ruby.html
