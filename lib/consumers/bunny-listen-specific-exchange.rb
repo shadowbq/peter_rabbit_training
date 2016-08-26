@@ -4,7 +4,7 @@
 require "rubygems"
 require "bunny"
 
-conn = Bunny.new(:hostname => '10.5.0.10', :automatically_recover => false)
+conn = Bunny.new(:hostname => '127.0.0.1', :automatically_recover => false)
 conn.start
 
 ch   = conn.create_channel
