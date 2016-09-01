@@ -17,6 +17,8 @@ Bunny supports Ruby 2.0 and later versions.
 
 [Tutorial one: "Hello World!"](http://www.rabbitmq.com/tutorial-one-ruby.html):
 
+  Basic Queue
+
     ruby send.rb
     ruby receive.rb
 

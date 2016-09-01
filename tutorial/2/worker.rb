@@ -7,12 +7,15 @@ conn = Bunny.new(:automatically_recover => false)
 conn.start
 
 ch   = conn.create_channel
+# Message durability to disk
 q    = ch.queue("task_queue", :durable => true)
 
+# Fair dispatch (queue on rabbit not worker)
 ch.prefetch(1)
 puts " [*] Waiting for messages. To exit press CTRL+C"
 
 begin
+  # Message acknowledgment
   q.subscribe(:manual_ack => true, :block => true) do |delivery_info, properties, body|
     puts " [x] Received '#{body}'"
     # imitate some work

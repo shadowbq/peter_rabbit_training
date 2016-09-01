@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 
+#"publish/subscribe".
+
 require "bunny"
 
 conn = Bunny.new(:automatically_recover => false)

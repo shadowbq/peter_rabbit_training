@@ -8,6 +8,8 @@ conn.start
 
 ch  = conn.create_channel
 x   = ch.fanout("logs")
+
+# When we supply queue name as an empty string, we create a non-durable queue with a generated name
 q   = ch.queue("", :exclusive => true)
 
 q.bind(x)
